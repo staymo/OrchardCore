@@ -1,4 +1,5 @@
 using GraphQL.Types;
+using OrchardCore.ContentManagement.GraphQL.Queries.Types;
 using OrchardCore.Flows.Models;
 
 namespace OrchardCore.Flows.GraphQL
@@ -11,6 +12,8 @@ namespace OrchardCore.Flows.GraphQL
 
             Field(x => x.Size, nullable: true);
             Field<FlowAlignmentEnum>("alignment");
+
+            Interface<ContentPartInterface>();
         }
     }
 }

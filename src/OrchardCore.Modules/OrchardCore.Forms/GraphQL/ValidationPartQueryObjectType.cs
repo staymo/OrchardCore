@@ -1,4 +1,5 @@
 using GraphQL.Types;
+using OrchardCore.ContentManagement.GraphQL.Queries.Types;
 using OrchardCore.Forms.Models;
 
 namespace OrchardCore.Forms.GraphQL
@@ -10,6 +11,8 @@ namespace OrchardCore.Forms.GraphQL
             Name = "ValidationPart";
 
             Field(x => x.For, nullable: true);
+
+            Interface<ContentPartInterface>();
         }
     }
 }

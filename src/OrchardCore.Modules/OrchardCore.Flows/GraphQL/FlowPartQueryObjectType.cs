@@ -16,6 +16,8 @@ namespace OrchardCore.Flows.GraphQL
                 "widgets",
                 "The widgets.",
                 resolve: context => context.Source.Widgets);
+
+            Interface<ContentPartInterface>();
         }
     }
 }

@@ -52,6 +52,8 @@ namespace OrchardCore.Lists.GraphQL
 
                     return await query.ListAsync();
                 });
+
+            Interface<ContentPartInterface>();
         }
     }
 }

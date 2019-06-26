@@ -1,4 +1,5 @@
 using GraphQL.Types;
+using OrchardCore.ContentManagement.GraphQL.Queries.Types;
 using OrchardCore.Forms.Models;
 
 namespace OrchardCore.Forms.GraphQL
@@ -11,6 +12,8 @@ namespace OrchardCore.Forms.GraphQL
 
             Field(x => x.Text, nullable: true);
             Field(x => x.Type, nullable: true);
+
+            Interface<ContentPartInterface>();
         }
     }
 }

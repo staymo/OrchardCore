@@ -20,6 +20,8 @@ namespace OrchardCore.Taxonomies.GraphQL
                 .Description("the content items")
                 .PagingArguments()
                 .Resolve(x => x.Page(x.Source.Terms));
+
+            Interface<ContentPartInterface>();
         }
     }
 }

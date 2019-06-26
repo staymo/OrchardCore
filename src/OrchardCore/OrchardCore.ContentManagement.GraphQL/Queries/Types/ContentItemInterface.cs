@@ -25,6 +25,7 @@ namespace OrchardCore.ContentManagement.GraphQL.Queries.Types
             Field<DateTimeGraphType>("createdUtc", resolve: ci => ci.Source.CreatedUtc);
             Field(ci => ci.Owner);
             Field(ci => ci.Author);
+            Field<ListGraphType<ContentPartInterface>>("parts", "The content item's parts.");
         }
 
         public override FieldType AddField(FieldType fieldType)

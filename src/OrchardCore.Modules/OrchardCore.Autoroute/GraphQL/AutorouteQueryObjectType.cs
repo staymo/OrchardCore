@@ -1,6 +1,7 @@
 using GraphQL.Types;
 using Microsoft.Extensions.Localization;
 using OrchardCore.Autoroute.Model;
+using OrchardCore.ContentManagement.GraphQL.Queries.Types;
 
 namespace OrchardCore.Autoroute.GraphQL
 {
@@ -12,6 +13,8 @@ namespace OrchardCore.Autoroute.GraphQL
             Description = T["Custom URLs (permalinks) for your content item."];
 
             Field(x => x.Path).Description(T["The permalinks for your content item."]);
+
+            Interface<ContentPartInterface>();
         }
     }
 }

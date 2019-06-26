@@ -20,6 +20,8 @@ namespace OrchardCore.Flows.GraphQL
                 .Description("the content items")
                 .PagingArguments()
                 .Resolve(x => x.Page(x.Source.ContentItems));
+
+            Interface<ContentPartInterface>();
         }
     }
 }

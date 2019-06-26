@@ -1,8 +1,10 @@
+using System.Collections.Generic;
 using System.IO;
 using System.Text.Encodings.Web;
 using GraphQL.Types;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
+using Newtonsoft.Json.Linq;
 using OrchardCore.Apis.GraphQL;
 using OrchardCore.ContentManagement.Display;
 using OrchardCore.ContentManagement.GraphQL.Options;
@@ -55,9 +57,32 @@ namespace OrchardCore.ContentManagement.GraphQL.Queries.Types
                     }
                 });
 
+            Field<ListGraphType<ContentPartInterface>>("parts", "The content item's parts.", resolve: ResolveContentParts);
+
             Interface<ContentItemInterface>();
 
             IsTypeOf = IsContentType;
+        }
+
+        private IEnumerable<ContentPart> ResolveContentParts(ResolveFieldContext<ContentItem> resolveContext)
+        {
+            var contentItem = resolveContext.Source;
+            foreach (JProperty contentPart in contentItem.Content)
+            {
+                if (contentPart == null || string.IsNullOrEmpty(contentPart.Name))
+                {
+                    continue;
+                }
+
+                var context = (GraphQLContext) resolveContext.UserContext;
+                var contentPartFactory = context.ServiceProvider.GetService<ITypeActivatorFactory<ContentPart>>();
+
+                string partName = contentPart.Name;
+                var partActivator = contentPartFactory.GetTypeActivator(partName);
+                var part = contentItem.Get(partActivator.Type, partName) as ContentPart;
+
+                yield return part;
+            }
         }
 
         private bool IsContentType(object obj)

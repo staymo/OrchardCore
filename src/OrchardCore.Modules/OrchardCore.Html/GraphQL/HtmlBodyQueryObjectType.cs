@@ -1,5 +1,6 @@
 using GraphQL.Types;
 using Microsoft.Extensions.Localization;
+using OrchardCore.ContentManagement.GraphQL.Queries.Types;
 using OrchardCore.Html.Model;
 
 namespace OrchardCore.Html.GraphQL
@@ -12,6 +13,8 @@ namespace OrchardCore.Html.GraphQL
             Description = T["Content stored as HTML."];
 
             Field(x => x.Html);
+
+            Interface<ContentPartInterface>();
         }
     }
 }

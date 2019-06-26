@@ -1,5 +1,6 @@
 using GraphQL.Types;
 using OrchardCore.ContentFields.Fields;
+using OrchardCore.ContentManagement.GraphQL.Queries.Types;
 
 namespace OrchardCore.ContentFields.GraphQL.Types
 {
@@ -11,6 +12,8 @@ namespace OrchardCore.ContentFields.GraphQL.Types
 
             Field(x => x.Url, nullable: true).Description("the url of the link");
             Field(x => x.Text, nullable: true).Description("the text of the link");
+
+            Interface<ContentPartInterface>();
         }
     }
 }

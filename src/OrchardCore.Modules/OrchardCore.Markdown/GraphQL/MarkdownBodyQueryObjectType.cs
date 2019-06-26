@@ -1,5 +1,6 @@
 using GraphQL.Types;
 using Microsoft.Extensions.Localization;
+using OrchardCore.ContentManagement.GraphQL.Queries.Types;
 using OrchardCore.Markdown.Model;
 
 namespace OrchardCore.Markdown.GraphQL
@@ -20,6 +21,8 @@ namespace OrchardCore.Markdown.GraphQL
                 .Description("the HTML representation of the markdown content")
                 .Type(new StringGraphType())
                 ;
+
+            Interface<ContentPartInterface>();
         }
 
         private static string ToHtml(string markdown)

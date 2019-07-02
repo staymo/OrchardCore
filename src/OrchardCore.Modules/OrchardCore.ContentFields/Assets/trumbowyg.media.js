@@ -18,14 +18,27 @@
                             mediaApp.selectedMedias = [];
                             var modal = $('#mediaModalHtmlField').modal();
                             $('#mediaHtmlFieldSelectButton').on('click', function (v) {
-                                var mediaBodyContent = "";
-                                for (i = 0; i < mediaApp.selectedMedias.length; i++) {
-                                    mediaBodyContent += ' {{ "' + mediaApp.selectedMedias[i].mediaPath + '" | asset_url | img_tag }}';
-                                }
-                                var node = document.createTextNode(mediaBodyContent);
+                                //the code below insert liquid tag for images, can't show properly when filtered by | raw.
+                                //var mediaBodyContent = "";
+                                //for (i = 0; i < mediaApp.selectedMedias.length; i++) {
+                                //    mediaBodyContent += ' {{ "' + mediaApp.selectedMedias[i].mediaPath + '" | asset_url | img_tag }}';
+                                //}
+                                //var node = document.createTextNode(mediaBodyContent);
+                                //trumbowyg.restoreRange();
+                                //trumbowyg.range.deleteContents();
+                                //trumbowyg.range.insertNode(node);
+
+                                //Insert <img> html element instead.
                                 trumbowyg.restoreRange();
                                 trumbowyg.range.deleteContents();
-                                trumbowyg.range.insertNode(node);
+                                for (i = 0; i < mediaApp.selectedMedias.length; i++) {
+                                    //mediaBodyContent += ' {{ "' + mediaApp.selectedMedias[i].mediaPath + '" | asset_url | img_tag }}';
+                                    var node = document.createElement("img");
+                                    node.setAttribute("src", "/media/" + mediaApp.selectedMedias[i].mediaPath);
+                                    node.classList.add("img-fluid","rounded");
+                                    trumbowyg.range.insertNode(node);
+                                }
+                                ////////////////////////////////////////////
                                 trumbowyg.syncTextarea();
                                 $(document).trigger('contentpreview:render');
                                 $('#mediaModalHtmlField').modal('hide');

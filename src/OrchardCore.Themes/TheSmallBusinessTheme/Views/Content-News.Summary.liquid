@@ -1,0 +1,24 @@
+<div class="card mb-4">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-lg-6">
+                <a href="#">
+                    <img class="img-fluid rounded" src="{{ Model.ContentItem.Content.News.Image.Paths | asset_url }}" alt="" />
+              </a>
+            </div>
+
+            <div class="col-lg-6">
+                {% a display_for:Model.ContentItem %}
+                <h2 class="card-title">{{ Model.ContentItem.Content.TitlePart.Title }}</h2>
+                {% enda %}
+                <p class="card-text">{{ Model.ContentItem.Content.MarkdownBodyPart.Markdown | markdownify | truncatewords: 30 |raw }}</p>
+                {% a display_for:Model.ContentItem %}
+                <span class="btn btn-primary">Read More &rarr;</span>
+                {% enda %}
+            </div>
+        </div>
+    </div>
+    <div class="card-footer text-muted">
+        {{ Model.ContentItem.ContentItem.PublishedUtc | date: "%b %d, %y" }} by {{ Model.ContentItem.ContentItem.Author }}
+    </div>
+</div>

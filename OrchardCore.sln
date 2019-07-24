@@ -378,6 +378,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness", "src\Orcha
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheSmallBusinessTheme", "src\OrchardCore.Themes\TheSmallBusinessTheme\TheSmallBusinessTheme.csproj", "{57256FED-D97E-4C50-9EA5-C73E816FFB9F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheCreativeTheme", "src\OrchardCore.Themes\TheCreativeTheme\TheCreativeTheme.csproj", "{9E1E0CB8-15A8-4E6A-AD2F-4D30F370F26D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1008,6 +1010,10 @@ Global
 		{57256FED-D97E-4C50-9EA5-C73E816FFB9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57256FED-D97E-4C50-9EA5-C73E816FFB9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57256FED-D97E-4C50-9EA5-C73E816FFB9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E1E0CB8-15A8-4E6A-AD2F-4D30F370F26D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E1E0CB8-15A8-4E6A-AD2F-4D30F370F26D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E1E0CB8-15A8-4E6A-AD2F-4D30F370F26D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E1E0CB8-15A8-4E6A-AD2F-4D30F370F26D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1186,6 +1192,7 @@ Global
 		{72B9B2A0-1166-4744-AB08-8704DD9CC8AC} = {F23AC6C2-DE44-4699-999D-3C478EF3D691}
 		{87941C4F-D97E-44C6-B2AA-CD8EB7810A41} = {AF3BADEA-CC93-4116-B3C1-F8D074EBEE4F}
 		{57256FED-D97E-4C50-9EA5-C73E816FFB9F} = {AF3BADEA-CC93-4116-B3C1-F8D074EBEE4F}
+		{9E1E0CB8-15A8-4E6A-AD2F-4D30F370F26D} = {AF3BADEA-CC93-4116-B3C1-F8D074EBEE4F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {46A1D25A-78D1-4476-9CBF-25B75E296341}

@@ -23,18 +23,23 @@
 
   <!-- Theme CSS - Includes Bootstrap -->
   <link href="/TheCreativeTheme/css/creative.min.css" rel="stylesheet">
+  <link href="/TheCreativeTheme/css/animate.min.css" rel="stylesheet">
 
   {% if Request.Path != "/" %} <link href="/TheCreativeTheme/css/Styles.css" rel="stylesheet" /> {% endif %}
-  {% if Request.Path != "/" %}
   <style>
+    {% if Request.Path != "/" %}
 @media (min-width: 992px) {
   #mainNav {
     -webkit-box-shadow: none;
     box-shadow: none;
     background-color: #4CAF50;
   }
+    {% endif %}
+    .fa-spe {
+        color: yellowgreen!important;
+    }
   </style>
-  {% endif %}
+
   </head>
 
 <body id="page-top" dir="{{ Culture.Dir }}">

@@ -1,0 +1,37 @@
+{% assign pageUrl = Request.Path %}
+{% assign pageId = Model.ContentItem.ContainedPart.ListContentItemId %}
+{% assign dailyParent = Content["alias:daily"] %}
+
+<div class="row">
+	<!-- Sidebar Column -->
+	<div class="col-lg-3 mb-4">
+		<div class="list-group">
+			{% for project in dailyParent.Content.Activities.ContentItems %}
+			{% if "/" + project.SimpleItem.DetailItemUrl.Url != pageUrl %}
+			<a href="/{{ project.SimpleItem.DetailItemUrl.Url }}" class="list-group-item">{{project.TitlePart.Title}}</a>
+			{% else %}
+			<a href="/{{ project.SimpleItem.DetailItemUrl.Url }}" class="list-group-item active">{{project.TitlePart.Title}}</a>
+			{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+
+	<!-- Post Content Column -->
+	<div class="col-lg-9 mb-4">
+		<p class="lead">{{ Model.ContentItem }}</p>
+		<hr>
+		<img class="img-fluid rounded" src="{{ Model.ContentItem.Content.Project.Image.Paths | asset_url }}" alt="">
+		<hr>
+
+		<p class="lead">{{ Model.ContentItem.Content.Project.Summary.Text }}</p>
+		{% capture html %}{{ Model.ContentItem.Content.HtmlBodyPart.Html }}{% endcapture %}
+		<article>{{ html | raw }}</article>
+		<hr>
+		{% for item in Model.ContentItem.Content.Project.Attachments.Paths %}
+		<a href="/media/{{ item }}">{{item}}</a>
+		<br />
+		{% endfor %}
+		<br />
+		<hr>
+	</div>
+</div>

@@ -1,0 +1,3 @@
+View下所有的cshtml文件暂时无用。从TheTheme复制而来，只是为了验证Full CMS模式和Decoupled CMS模式可以共存。
+
+Layout.cshtml已经加bk后缀，作为备份存在。

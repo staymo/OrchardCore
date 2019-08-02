@@ -374,11 +374,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrchardCore.Github", "src\O
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrchardCore.Contents.Core", "src\OrchardCore\OrchardCore.Contents.Core\OrchardCore.Contents.Core.csproj", "{72B9B2A0-1166-4744-AB08-8704DD9CC8AC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernBusiness", "src\OrchardCore.Themes\ModernBusiness.OrchardCore\ModernBusiness.csproj", "{87941C4F-D97E-44C6-B2AA-CD8EB7810A41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheModernBusiness", "src\OrchardCore.Themes\TheModernBusiness\TheModernBusiness.csproj", "{87941C4F-D97E-44C6-B2AA-CD8EB7810A41}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheSmallBusinessTheme", "src\OrchardCore.Themes\TheSmallBusinessTheme\TheSmallBusinessTheme.csproj", "{57256FED-D97E-4C50-9EA5-C73E816FFB9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheCreativeTheme", "src\OrchardCore.Themes\TheCreativeTheme\TheCreativeTheme.csproj", "{9E1E0CB8-15A8-4E6A-AD2F-4D30F370F26D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheCreativeTheme", "src\OrchardCore.Themes\TheCreativeTheme\TheCreativeTheme.csproj", "{9E1E0CB8-15A8-4E6A-AD2F-4D30F370F26D}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{F592DA41-FF2A-4EA2-ADFD-1DB85A225E9B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1014,6 +1016,10 @@ Global
 		{9E1E0CB8-15A8-4E6A-AD2F-4D30F370F26D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E1E0CB8-15A8-4E6A-AD2F-4D30F370F26D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E1E0CB8-15A8-4E6A-AD2F-4D30F370F26D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F592DA41-FF2A-4EA2-ADFD-1DB85A225E9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F592DA41-FF2A-4EA2-ADFD-1DB85A225E9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F592DA41-FF2A-4EA2-ADFD-1DB85A225E9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F592DA41-FF2A-4EA2-ADFD-1DB85A225E9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

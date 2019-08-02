@@ -21,7 +21,8 @@
   -->
 
   <ItemGroup>
-    <ProjectReference Include="..\..\OrchardCore.Themes\ModernBusiness.OrchardCore\ModernBusiness.csproj" />
+    <ProjectReference Include="..\..\OrchardCore.Themes\TheCreativeTheme\TheCreativeTheme.csproj" />
+    <ProjectReference Include="..\..\OrchardCore.Themes\TheModernBusiness\TheModernBusiness.csproj" />
     <ProjectReference Include="..\..\OrchardCore.Themes\TheSmallBusinessTheme\TheSmallBusinessTheme.csproj" />
     <ProjectReference Include="..\OrchardCore.Application.Targets\OrchardCore.Application.Targets.csproj" PrivateAssets="none" />
 

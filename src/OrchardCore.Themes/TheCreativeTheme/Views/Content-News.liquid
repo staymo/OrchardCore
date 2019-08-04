@@ -13,12 +13,19 @@
         <a href="/News1?contentType=News&termId={{ c }}"><p class="btn btn-primary" style="font-size:0.8rem">{{name[0]}}</p></a>
         {% endfor %}
         </p>
-        <hr>
         <img class="img-fluid rounded" src="{{ Model.ContentItem.Content.News.Image.Paths | asset_url }}" alt="">
+        <hr>
+        <div class="lead" style="text-align:center">本文附件</div>
+        <hr>
+        {% for item in Model.ContentItem.Content.News.Attachments.Paths %}
+        <a href="/media/{{ item }}">{{item}}</a>
+        <br />
+        {% endfor %}
         <hr>
         <p class="lead">{{ Model.ContentItem.Content.MarkdownBodyPart.Markdown | markdownify | raw }}</p>
         {% capture html %}{{ Model.ContentItem.Content.News.Content.Html }}{% endcapture %}
         <article>{{ html | raw }}</article>
+        <div class="lead">本文附件</div>
         <hr>
         {% for item in Model.ContentItem.Content.News.Attachments.Paths %}
         <a href="/media/{{ item }}">{{item}}</a>

@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   orchardcore.cms.web:
-    image: ${DOCKER_REGISTRY-}orchardcorecmsweb
+    image: hmo/orchardcorecmsweb
     build:
       context: .
       dockerfile: src/OrchardCore.Cms.Web/Dockerfile

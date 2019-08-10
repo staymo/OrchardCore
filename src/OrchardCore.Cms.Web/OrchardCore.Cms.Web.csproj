@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\" />
+    <Folder Include="docker\" />
   </ItemGroup>
 
   <ItemGroup>
